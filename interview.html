@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Mock Interview - PrepAIre</title>
+  <link rel="stylesheet" href="interview-style.css">
+</head>
+<body>
+  <div class="interview-container">
+    
+    <!-- Header -->
+    <header class="interview-header">
+      <img src="PrepAIre logo.png" alt="PrepAIre Logo" class="logo-small">
+      <h1>AI Mock Interview</h1>
+      <button id="endInterview" class="end-btn">End Interview</button>
+    </header>
+
+    <!-- AI Interviewer Section -->
+    <div class="interviewer-section">
+      <div class="ai-avatar">
+        <div class="avatar-circle">
+          <svg width="120" height="120" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+            <circle cx="12" cy="7" r="4"></circle>
+          </svg>
+        </div>
+        <div class="status-indicator">
+          <span class="pulse"></span>
+          <span class="status-text">Listening...</span>
+        </div>
+      </div>
+
+      <!-- Question Display -->
+      <div class="question-card">
+        <div class="question-number">Question <span id="currentQuestionNum">1</span> of <span id="totalQuestions">5</span></div>
+        <p id="currentQuestion">Welcome! Let me introduce myself. I'm your AI interviewer today. Are you ready to begin?</p>
+      </div>
+    </div>
+
+    <!-- User Response Section -->
+    <div class="response-section">
+      <div class="response-controls">
+        <button id="recordBtn" class="record-btn">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 14c1.66 0 3-1.34 3-3V5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3z"></path>
+            <path d="M17 11c0 2.76-2.24 5-5 5s-5-2.24-5-5H5c0 3.53 2.61 6.43 6 6.92V21h2v-3.08c3.39-.49 6-3.39 6-6.92h-2z"></path>
+          </svg>
+          <span>Click to Record Answer</span>
+        </button>
+
+        <div class="or-divider">OR</div>
+
+        <textarea id="textAnswer" placeholder="Type your answer here..." rows="4"></textarea>
+        
+        <button id="submitAnswer" class="submit-btn">Submit Answer</button>
+      </div>
+
+      <!-- Recording Timer -->
+      <div id="recordingTimer" class="recording-timer" style="display: none;">
+        <span class="recording-dot"></span>
+        Recording... <span id="timerDisplay">0:00</span>
+      </div>
+    </div>
+
+    <!-- Progress Bar -->
+    <div class="progress-container">
+      <div class="progress-bar">
+        <div id="progressFill" class="progress-fill"></div>
+      </div>
+      <p class="progress-text">Interview Progress: <span id="progressPercent">0%</span></p>
+    </div>
+
+  </div>
+
+  <script src="interview-script.js"></script>
+</body>
+</html>

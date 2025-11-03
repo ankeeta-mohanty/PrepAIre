@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PrepAIre - Your AI Partner for Job Success</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="overlay"></div>
+  <header>
+     <img src="PrepAIre logo.png" alt="PrepAIre Logo" class="logo">
+    <h1>Prep<span class="ai">AI</span>re</h1>
+    <p class="tagline">Your AI Partner for Job Success</p>
+  </header>
+ 
+    <main class="home">
+    <button onclick="scrollToSection('resume')">AI Resume Analyzer</button>
+    <button onclick="scrollToSection('interview')">AI Mock Interview</button>
+  </main>
+
+<!-- 📄 Resume Analyzer Section -->
+<section id="resume">
+  <h2>AI Resume Analyzer</h2>
+  
+  <!-- File Upload Area -->
+  <div class="upload-container">
+    <input type="file" id="resumeFile" accept=".pdf,.doc,.docx,.txt" style="display: none;">
+    <div class="upload-box" id="uploadBox">
+      <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+        <polyline points="17 8 12 3 7 8"></polyline>
+        <line x1="12" y1="3" x2="12" y2="15"></line>
+      </svg>
+      <p>Click to upload or drag and drop</p>
+      <p class="file-types">PDF, DOC, DOCX, TXT (Max 10MB)</p>
+    </div>
+    <div id="fileName" class="file-name"></div>
+  </div>
+  
+  <!-- OR Divider -->
+  <div class="divider">
+    <span>OR</span>
+  </div>
+  
+  <!-- Text Input Area -->
+  <textarea id="resumeText" placeholder="Paste your resume text here..."></textarea>
+  
+  <button id="analyze">Analyze Resume</button>
+  <div id="resultBox"></div>
+</section>
+
+  <!-- 🎤 Mock Interview Section -->
+<section id="interview">
+  <h2>AI Mock Interview</h2>
+  
+  <!--Mock Interview Section-->
+  
+  <!-- Status Messages -->
+  <div id="interviewStatus" class="interview-status">
+    <div class="status-card">
+      <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M9 11l3 3L22 4"></path>
+        <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
+      </svg>
+      <h3>Analyze Your Resume First</h3>
+      <p>Upload and analyze your resume in the section above to unlock the AI Mock Interview.</p>
+    </div>
+  </div>
+
+  <!-- Interview Ready State (Hidden by default) -->
+  <div id="interviewReady" class="interview-ready" style="display: none;">
+    <div class="ready-card">
+      <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2">
+        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+        <polyline points="22 4 12 14.01 9 11.01"></polyline>
+      </svg>
+      <h3>Resume Analysis Complete!</h3>
+      <p class="analysis-summary" id="analysisSummary">
+        We've analyzed your resume and prepared personalized interview questions based on your experience and skills.
+      </p>
+      
+      <div class="interview-details">
+        <div class="detail-item">
+          <span class="label">Position:</span>
+          <span class="value" id="detectedPosition">Software Developer</span>
+        </div>
+        <div class="detail-item">
+          <span class="label">Experience Level:</span>
+          <span class="value" id="detectedLevel">Mid-Level</span>
+        </div>
+        <div class="detail-item">
+          <span class="label">Key Skills:</span>
+          <span class="value" id="detectedSkills">JavaScript, React, Node.js</span>
+        </div>
+        <div class="detail-item">
+          <span class="label">Interview Duration:</span>
+          <span class="value">15-20 minutes</span>
+        </div>
+      </div>
+
+      <button id="startInterview" class="start-interview-btn">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="10"></circle>
+          <polygon points="10 8 16 12 10 16 10 8"></polygon>
+        </svg>
+        Start Mock Interview
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ⚙️ JS -->
+  <script src="script.js"></script>
+
+  <footer>
+    <p>© 2025 PrepAIre | Powered by Team TechDiamond</p>
+  </footer>
+</body>
+</html>
