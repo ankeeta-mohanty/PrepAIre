@@ -5,5 +5,5 @@
 
 This project aims to provide users with personalized feedback, realistic interview experiences, and valuable insights to enhance their confidence and employability.
 
-Developed by: Ankeeta Mohanty and Rrachita Das 💻✨
+Developed by: Ankeeta Mohanty and Rachita Das 💻✨
 </p>
